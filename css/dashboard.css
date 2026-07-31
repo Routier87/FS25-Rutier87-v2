@@ -1,0 +1,84 @@
+/* ==========================================
+   FS25 MANAGER V2
+   DASHBOARD CSS
+========================================== */
+
+
+.dashboard{
+
+    width:90%;
+
+    margin:30px auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+
+.dashboardCard{
+
+    background:#242424;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,.3);
+
+    transition:.3s;
+
+}
+
+
+
+.dashboardCard:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.dashboardCard h3{
+
+    color:#aaa;
+
+    margin-bottom:15px;
+
+    font-size:18px;
+
+}
+
+
+
+.dashboardCard h1{
+
+    color:#59c94d;
+
+    font-size:35px;
+
+}
+
+
+
+
+
+body.light .dashboardCard{
+
+    background:white;
+
+    color:#222;
+
+}
