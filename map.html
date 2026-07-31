@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FS25 Manager - Map</title>
+
+<link rel="stylesheet" href="../css/map.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<a href="../index.html" class="backButton">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Retour
+
+</a>
+
+
+<div class="title">
+
+<i class="fa-solid fa-map"></i>
+
+<h1 id="mapName">
+Nom de la map
+</h1>
+
+</div>
+
+
+<button id="favoriteButton">
+
+⭐
+
+</button>
+
+
+</header>
+
+
+
+<!-- IMAGE MAP -->
+
+<section class="mapHero">
+
+
+<img id="mapImage"
+src="../images/maps/default.jpg"
+alt="Image de la map">
+
+
+</section>
+
+
+
+
+<main>
+
+
+
+<!-- INFORMATIONS PRINCIPALES -->
+
+<section class="box">
+
+
+<h2>
+<i class="fa-solid fa-circle-info"></i>
+Informations
+</h2>
+
+
+<div class="infoGrid">
+
+
+<div>
+
+<p>💰 Argent</p>
+
+<h2 id="money">
+
+0 €
+
+</h2>
+
+</div>
+
+
+<div>
+
+<p>🌾 Champs</p>
+
+<h2 id="fieldCount">
+
+0
+
+</h2>
+
+</div>
+
+
+<div>
+
+<p>🐄 Animaux</p>
+
+<h2 id="animalCount">
+
+0
+
+</h2>
+
+</div>
+
+
+<div>
+
+<p>⏱️ Heures de jeu</p>
+
+<h2 id="hours">
+
+0 h
+
+</h2>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- CALCULATRICE ARGENT -->
+
+
+<section class="box">
+
+
+<h2>
+💰 Gestion financière
+</h2>
+
+
+<input 
+type="number"
+id="moneyInput"
+placeholder="Montant">
+
+
+<div class="buttons">
+
+
+<button onclick="addMoney()">
+
+➕
+
+Ajouter
+
+</button>
+
+
+<button onclick="removeMoney()">
+
+➖
+
+Retirer
+
+</button>
+
+
+</div>
+
+
+
+<h3>
+
+Solde actuel :
+
+<span id="currentMoney">
+
+0 €
+
+</span>
+
+</h3>
+
+
+</section>
+
+
+
+
+
+
+<!-- ACTIVITES -->
+
+
+<section class="box">
+
+
+<h2>
+🎯 Objectifs de la partie
+</h2>
+
+
+<div class="checkboxGrid">
+
+
+<label>
+<input type="checkbox">
+🌾 Travaux agricoles
+</label>
+
+
+<label>
+<input type="checkbox">
+🐄 Élevage
+</label>
+
+
+<label>
+<input type="checkbox">
+🌲 Sylviculture
+</label>
+
+
+<label>
+<input type="checkbox">
+🏭 Production
+</label>
+
+
+<label>
+<input type="checkbox">
+⛏️ Carrière
+</label>
+
+
+<label>
+<input type="checkbox">
+👥 Multijoueur
+</label>
+
+
+<label>
+<input type="checkbox">
+🎮 Solo
+</label>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ANIMAUX -->
+
+
+<section class="box">
+
+
+<h2>
+🐄 Animaux présents
+</h2>
+
+
+<div class="checkboxGrid">
+
+
+<label>
+<input type="checkbox">
+🐄 Vaches
+</label>
+
+
+<label>
+<input type="checkbox">
+🐑 Moutons
+</label>
+
+
+<label>
+<input type="checkbox">
+🐔 Poules
+</label>
+
+
+<label>
+<input type="checkbox">
+🐖 Cochons
+</label>
+
+
+<label>
+<input type="checkbox">
+🐎 Chevaux
+</label>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CULTURES -->
+
+
+<section class="box">
+
+
+<h2>
+🌱 Cultures
+</h2>
+
+
+<div class="checkboxGrid">
+
+
+<label>
+<input type="checkbox">
+Blé
+</label>
+
+
+<label>
+<input type="checkbox">
+Maïs
+</label>
+
+
+<label>
+<input type="checkbox">
+Orge
+</label>
+
+
+<label>
+<input type="checkbox">
+Colza
+</label>
+
+
+<label>
+<input type="checkbox">
+Tournesol
+</label>
+
+
+<label>
+<input type="checkbox">
+Betterave
+</label>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CHAMPS -->
+
+
+<section class="box">
+
+
+<h2>
+🌾 Gestion des champs
+</h2>
+
+
+<button class="mainButton">
+
+➕ Ajouter un champ
+
+</button>
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Champ</th>
+
+<th>Travail</th>
+
+<th>Etat</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="fieldsTable">
+
+
+<tr>
+
+<td>22</td>
+
+<td>Récolte</td>
+
+<td>🟠</td>
+
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- HISTORIQUE -->
+
+
+<section class="box">
+
+
+<h2>
+📒 Historique financier
+</h2>
+
+
+<ul id="history">
+
+
+</ul>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- NOTES -->
+
+
+<section class="box">
+
+
+<h2>
+📝 Notes
+</h2>
+
+
+<textarea
+id="notes"
+placeholder="Notes sur cette partie...">
+</textarea>
+
+
+</section>
+
+
+
+
+</main>
+
+
+
+
+<script src="../js/storage.js"></script>
+
+<script src="../js/calculator.js"></script>
+
+<script src="../js/map.js"></script>
+
+
+</body>
+
+</html>
