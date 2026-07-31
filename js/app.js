@@ -191,7 +191,7 @@ index
 
 
 window.location.href=
-"pages/map.html";
+"map.html";
 
 
 
