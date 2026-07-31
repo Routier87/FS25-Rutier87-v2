@@ -450,7 +450,7 @@ adminButton.onclick=function(){
 
 
 window.location.href=
-"pages/admin.html";
+"admin.html";
 
 
 
