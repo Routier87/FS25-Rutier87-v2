@@ -9,9 +9,9 @@
 // ===============================
 
 
-let adminUser = localStorage.getItem("adminUser") || "admin";
+let adminUser = localStorage.getItem("adminUser") || "Routier87";
 
-let adminPass = localStorage.getItem("adminPass") || "routier12345";
+let adminPass = localStorage.getItem("adminPass") || "878787";
 
 
 let maps = JSON.parse(localStorage.getItem("maps")) || [];
