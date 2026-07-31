@@ -1,0 +1,33 @@
+{
+  "siteName": "FS25 Routier87",
+
+  "version": "2.0",
+
+  "theme": "dark",
+
+  "admin": {
+    "username": "Routier87",
+    "password": "878787"
+  },
+
+  "currency": "€",
+
+  "language": "fr",
+
+  "defaultMapImage": "images/maps/default.jpg",
+
+  "features": {
+
+    "calculator": true,
+
+    "fieldsManager": true,
+
+    "animalsManager": true,
+
+    "activitiesManager": true,
+
+    "backupSystem": true
+
+  }
+
+}
