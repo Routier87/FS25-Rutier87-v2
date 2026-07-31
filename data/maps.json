@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "nom": "Ma première ferme",
+    "image": "images/maps/default.jpg",
+    "argent": 20000,
+    "description": "Nouvelle partie Farming Simulator 25",
+    "objectifs": [
+      "🌾 Travaux agricoles"
+    ],
+    "animaux": [
+      "🐄 Vaches"
+    ],
+    "cultures": [
+      "Blé",
+      "Maïs"
+    ],
+    "champs": [
+      {
+        "numero": 22,
+        "travail": "Récolte",
+        "etat": "🟠"
+      },
+      {
+        "numero": 23,
+        "travail": "Faire les bottes de foin",
+        "etat": "🟡"
+      }
+    ],
+    "historique": [
+      {
+        "type": "Départ",
+        "montant": 20000,
+        "date": "31/07/2026"
+      }
+    ],
+    "notes": "Prévoir achat d'un nouveau tracteur.",
+    "favorite": false
+  }
+]
